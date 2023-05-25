@@ -10,15 +10,6 @@
       "actions": "open"
     },
     {
-      "id": 2,
-      "title": "Holiday Inn Tbilisi, an IHG hotel",
-      "price": 105,
-      "area": "Tbilisi",
-      "description": "very luxury hotel",
-      "imageUrl": "https://cf.bstatic.com/images/hotel/max1024x768/218/218892197.jpg",
-      "actions": "open"
-    },
-    {
       "id": 3,
       "title": "Sheraton Grand Tbilisi Metechi Palace",
       "price": 200,
@@ -26,7 +17,6 @@
       "description": "in most popula district in tbilisi with very nice view",
       "imageUrl": "https://cache.marriott.com/marriottassets/marriott/TBSSI/tbssi-exterior-8483-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*",
       "actions": "open"
-
     },
     {
       "id": 4,
@@ -36,7 +26,6 @@
       "description": "also with very nice view with pool gym wifi and parking",
       "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/88/ef/90/exterior-view.jpg",
       "actions": "open"
-
     },
     {
       "id": 5,
@@ -46,8 +35,6 @@
       "description": "very good for business meeting",
       "imageUrl": "https://media.radissonhotels.net/image/radisson-blu-iveria-hotel-tbilisi-city-centre/exteriorview/16256-114261-f62759778_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610",
       "actions": "open"
-
     }
-
   ]
 }

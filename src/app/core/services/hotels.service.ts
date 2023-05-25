@@ -16,6 +16,6 @@ export class HotelsService {
   }
 
   public deleteHotels(id: number): Observable<HotelModel[]> {
-    return this._http.delete<HotelModel[]>(`${this.baseUrl}/hotels`)
+    return this._http.delete<HotelModel[]>(`${this.baseUrl}/hotels/${id}`)
   }
 }

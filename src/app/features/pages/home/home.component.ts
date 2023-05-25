@@ -90,7 +90,7 @@ export class HomeComponent implements OnInit{
 
   public deleteHotels(id: number): void {
     this._hotelsService.deleteHotels(id).subscribe(() => {
-      this.hotels = this.hotels.filter((hotels) => hotels.id != id)
+      this.hotels = this.hotels.filter((hotels) => hotels.id !== id)
     })
   }
 }

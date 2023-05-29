@@ -1,6 +1,33 @@
 {
   "hotels": [
     {
+      "id": 3,
+      "title": "Sheraton Grand Tbilisi Metechi Palace",
+      "price": 200,
+      "area": "Tbilisi",
+      "description": "in most popula district in tbilisi with very nice view",
+      "imageUrl": "https://cache.marriott.com/marriottassets/marriott/TBSSI/tbssi-exterior-8483-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*",
+      "actions": "open"
+    },
+    {
+      "id": 4,
+      "title": "Mercure Tbilisi Old Town",
+      "price": 1000,
+      "area": "Tbilisi",
+      "description": "also with very nice view with pool gym wifi and parking",
+      "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/88/ef/90/exterior-view.jpg",
+      "actions": "open"
+    },
+    {
+      "id": 5,
+      "title": "Radisson Blu Iveria Hotel, Tbilisi City Centre",
+      "price": 320,
+      "area": "Tbilisi",
+      "description": "very good for business meeting",
+      "imageUrl": "https://media.radissonhotels.net/image/radisson-blu-iveria-hotel-tbilisi-city-centre/exteriorview/16256-114261-f62759778_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610",
+      "actions": "open"
+    },
+    {
       "id": 1,
       "title": "Merrioti",
       "price": 99,
@@ -35,6 +62,14 @@
       "description": "very good for business meeting",
       "imageUrl": "https://media.radissonhotels.net/image/radisson-blu-iveria-hotel-tbilisi-city-centre/exteriorview/16256-114261-f62759778_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610",
       "actions": "open"
+    },
+    {
+      "id": "12",
+      "title": "builtmore",
+      "price": "12",
+      "description": "allclslclsl",
+      "imageUrl": "cdkdmskmsdkvmsd",
+      "area": "lscmclsmcla"
     }
   ]
 }

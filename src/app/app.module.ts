@@ -14,14 +14,17 @@ import {CommonModule} from '@angular/common';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogoptionsComponent } from './features/partials/dialogoptions/dialogoptions.component';
 import {MatMenuModule} from '@angular/material/menu';
-
+import { AddFormDialogComponent } from './features/partials/add-form-dialog/add-form-dialog.component';
+import {MatInputModule} from '@angular/material/input';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    DialogoptionsComponent
+    DialogoptionsComponent,
+    AddFormDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatButtonModule,
     CommonModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

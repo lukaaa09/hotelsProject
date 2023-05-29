@@ -8,13 +8,10 @@ import { HotelModel } from '../../../core/models/hotel.model';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
-  hotels: HotelModel[] = []
-  constructor(private _hotelsService: HotelsService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this._hotelsService.getHotels().subscribe(data => {
-      this.hotels = data
-    })
+
   }
 }

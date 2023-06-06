@@ -4,5 +4,6 @@ export interface AddHotelModel {
   price?: number,
   area?: string,
   description?: string,
-  imageUrl?: string
+  imageUrl?: string,
+  actions?: string
 }

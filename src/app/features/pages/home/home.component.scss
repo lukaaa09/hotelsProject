@@ -46,7 +46,8 @@ table {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #080844;
+  //background-color: #080844;
+  padding: 0;
 
   .item{
     margin-top: 10px;
@@ -55,10 +56,15 @@ table {
       font-size: 25px;
       margin-top: 5px;
       cursor: pointer;
-      color: white;
+      //color: white;
     }
     span{
-      color: white;
+      //color: white;
     }
   }
+}
+ng-container {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }

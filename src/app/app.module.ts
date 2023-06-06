@@ -16,7 +16,8 @@ import { DialogoptionsComponent } from './features/partials/dialogoptions/dialog
 import {MatMenuModule} from '@angular/material/menu';
 import { AddFormDialogComponent } from './features/partials/add-form-dialog/add-form-dialog.component';
 import {MatInputModule} from '@angular/material/input';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { EditFormComponent } from './features/partials/edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     DialogoptionsComponent,
-    AddFormDialogComponent
+    AddFormDialogComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatDialogModule,
     MatMenuModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

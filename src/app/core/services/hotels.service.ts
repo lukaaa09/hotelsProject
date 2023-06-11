@@ -23,4 +23,8 @@ export class HotelsService {
   public addHotel(hotel: AddHotelModel): Observable<AddHotelModel[]> {
     return this._http.post<AddHotelModel[]>(`${this.baseUrl}/hotels`, hotel)
   }
+
+  public updateHotels(id:number, hotel: HotelModel): Observable<HotelModel> {
+    return this._http.put<HotelModel>(`${this.baseUrl}/hotels/${id}`, hotel)
+  }
 }

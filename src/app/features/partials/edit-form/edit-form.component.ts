@@ -1,8 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { HotelModel } from '../../../core/models/hotel.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AddHotelModel } from '../../../core/models/add-hotel.model';
+import { HotelsService } from '../../../core/services/hotels.service';
+import { DialogRef } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-edit-form',
@@ -11,8 +13,9 @@ import { AddHotelModel } from '../../../core/models/add-hotel.model';
 })
 export class EditFormComponent implements OnInit{
   formGroup = new FormGroup<any>('')
-  constructor(@Inject(MAT_DIALOG_DATA) public hotel: HotelModel) {
-    console.log(this.hotel)
+  constructor(@Inject(MAT_DIALOG_DATA) public hotel: HotelModel,
+              private _hotelsService: HotelsService,
+              private  _dialogRef: MatDialogRef<any>) {
   }
 
   ngOnInit() {
@@ -25,8 +28,14 @@ export class EditFormComponent implements OnInit{
       area: new FormControl(this.hotel.area, [Validators.required]),
       actions: new FormControl(this.hotel.actions, [Validators.required])
     })
-    this.formGroup.patchValue(this.hotel)
-    console.log(this.formGroup)
+  }
+
+  updateHotels() {
+    this._hotelsService.updateHotels(this.hotel.id, this.formGroup.value).subscribe(updateHotel => {
+      this.hotel = updateHotel
+      this._dialogRef.close(updateHotel)
+      console.log(updateHotel)
+    })
   }
 
 }

@@ -34,6 +34,7 @@ export class AddFormDialogComponent implements OnInit{
   addHotel(): void {
     this._hotelsService.addHotel(this.formGroup.value as AddHotelModel).subscribe(res => {
       this.dialogRef.close(res)
+      console.log(res)
     })
   }
 

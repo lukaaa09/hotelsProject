@@ -2,29 +2,29 @@
   "hotels": [
     {
       "id": 1,
-      "title": "Merrioti",
-      "price": 99,
-      "area": "Tbilisi",
+      "title": "Radisson ",
+      "price": "1000",
       "description": "one of the most popular hotel in tbilisi",
       "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/210517162938-underscored-marriott-virginia-beach-oceanfront-exterior.jpg?q=w_3200,h_1800,x_0,y_0,c_fill",
+      "area": "liverpoool",
       "actions": "open"
     },
     {
       "id": 2,
-      "title": "Holiday Inn Tbilisi, an IHG hotel",
-      "price": 105,
-      "area": "Tbilisi",
-      "description": "very luxury hotel",
+      "title": "please i want to have job as an angular developer",
+      "price": "10225",
+      "description": "luka",
       "imageUrl": "https://cf.bstatic.com/images/hotel/max1024x768/218/218892197.jpg",
+      "area": "JKNVDJLN",
       "actions": "open"
     },
     {
       "id": 3,
-      "title": "Sheraton Grand Tbilisi Metechi Palace",
-      "price": 200,
-      "area": "Tbilisi",
-      "description": "in most popula district in tbilisi with very nice view",
+      "title": "georgian bank",
+      "price": "100000",
+      "description": "hopefully i have excellent interview ",
       "imageUrl": "https://cache.marriott.com/marriottassets/marriott/TBSSI/tbssi-exterior-8483-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*",
+      "area": "zoom",
       "actions": "open"
     }
   ]

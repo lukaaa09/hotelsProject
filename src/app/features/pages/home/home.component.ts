@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this._hotelsService.getHotels().subscribe(data => {
-      console.log(data)
       this.hotels = data
       this.dataSource.data = this.hotels.map((hotel, index) => {
         return {
@@ -61,16 +60,26 @@ export class HomeComponent implements OnInit{
     const selectedHotel = this.dataSource.data.filter((hotel) => hotel.id === id)
 
     const dialogRef = this.dialog.open(EditFormComponent, {
-      data: selectedHotel,
-      restoreFocus: false
+      data: selectedHotel[0]
     });
-    dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
+    dialogRef.afterClosed().subscribe( result => {
+      console.log(result)
+      if (result) {
+        const index = this.dataSource.data.findIndex(
+          (hotel) => hotel.id === id
+        );
+        this.dataSource.data[index] = result;
+
+        this.dataSource.data = [...this.dataSource.data];
+      }
+    } );
   }
 
   openFormDialog() {
     const dialogRef = this.dialog.open(AddFormDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
+      console.log(result )
       if (result) {
         this.hotels.push(result)
         this.dataSource.data = this.hotels

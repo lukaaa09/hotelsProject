@@ -9,6 +9,7 @@ import { DialogoptionsComponent } from '../../partials/dialogoptions/dialogoptio
 import {filter} from 'rxjs';
 import { AddFormDialogComponent } from '../../partials/add-form-dialog/add-form-dialog.component';
 import { EditFormComponent } from '../../partials/edit-form/edit-form.component';
+import { DeleteComponent } from '../../partials/delete/delete.component';
 
 
 @Component({
@@ -56,6 +57,17 @@ export class HomeComponent implements OnInit{
     dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
   }
 
+  deleteItemDialog(id: number) {
+    const selectedHotel = this.dataSource.data.find((hotel) => hotel.id === id);
+
+    const dialogRef = this.dialog.open(DeleteComponent, {
+      data: selectedHotel
+    });
+    dialogRef.afterClosed().subscribe(() => {
+      this.dataSource.data = this.dataSource.data.filter((hotels) => hotels.id !== id)
+    });
+  }
+
   openEditForm(id: number) {
     const selectedHotel = this.dataSource.data.filter((hotel) => hotel.id === id)
 
@@ -63,14 +75,13 @@ export class HomeComponent implements OnInit{
       data: selectedHotel[0]
     });
     dialogRef.afterClosed().subscribe( result => {
-      console.log(result)
       if (result) {
-        const index = this.dataSource.data.findIndex(
-          (hotel) => hotel.id === id
-        );
-        this.dataSource.data[index] = result;
-
-        this.dataSource.data = [...this.dataSource.data];
+        this.dataSource.data = this.dataSource.data.map((res) => {
+          if (res.id === result.id) {
+            return result
+          }
+          return res
+        })
       }
     } );
   }
@@ -120,10 +131,4 @@ export class HomeComponent implements OnInit{
     return this.selection.isSelected(row);
   }
 
-  public deleteHotels(id: number): void {
-    this._hotelsService.deleteHotels(id).subscribe(() => {
-      this.hotels = this.hotels.filter((hotels) => hotels.id !== id)
-      this.dataSource.data = this.hotels;
-    })
-  }
 }

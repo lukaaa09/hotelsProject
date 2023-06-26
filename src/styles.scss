@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+//@import "ngx-toastr";
 
 html, body { height: 100%; }
 body { margin: 0; padding: 0; box-sizing: border-box; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -8,4 +9,44 @@ body { margin: 0; padding: 0; box-sizing: border-box; font-family: Roboto, "Helv
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  width: 300px;
+  background: none;
+  border-bottom: 2px solid #babdba;
+}
+
+//styles for toastr
+.toast-container .ngx-toastr{
+  box-shadow: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#toast-container {
+  .ngx-toastr {
+    color: #ffffff;
+    font-family: "Roboto";
+    align-items: center;
+    margin: 20px 10px;
+    border-radius: 6px;
+    z-index: 200;
+    max-width: 700px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    box-shadow: none !important;
+
+    &.toast-success {
+      //background-color: $component-green;
+      background-color: #1EB789;
+    }
+
+    &.toast-error {
+      //background-color: $component-red;
+      background-color: #ef5066;
+    }
+  }
 }

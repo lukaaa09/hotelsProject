@@ -2,9 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { HotelModel } from '../../../core/models/hotel.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AddHotelModel } from '../../../core/models/add-hotel.model';
 import { HotelsService } from '../../../core/services/hotels.service';
-import { DialogRef } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-edit-form',

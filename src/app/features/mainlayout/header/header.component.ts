@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HotelsService } from '../../../core/services/hotels.service';
-import { HotelModel } from '../../../core/models/hotel.model';
+import { MatDialog } from '@angular/material/dialog';
+import { RegisterComponent } from '../../partials/register/register.component';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,23 @@ import { HotelModel } from '../../../core/models/hotel.model';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
-  constructor() {
+
+  constructor(public _dialog: MatDialog, private _authService: AuthService) {
   }
 
   ngOnInit() {
+  }
 
+  get isLoggedIn() {
+    return this._authService.isLoggedIn
+  }
+
+  public openRegisterDialog() {
+    const dialogRef = this._dialog.open(RegisterComponent, {restoreFocus: false});
+    dialogRef.afterClosed().subscribe(() => {});
+  }
+
+  logOut() {
+    this._authService.logOut()
   }
 }

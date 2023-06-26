@@ -2,29 +2,38 @@
   "hotels": [
     {
       "id": 1,
-      "title": "Radisson ",
-      "price": "1000",
+      "title": ",,,,,,,,,,,,,,,bgvfxgfcvg",
+      "price": 99,
       "description": "one of the most popular hotel in tbilisi",
       "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/210517162938-underscored-marriott-virginia-beach-oceanfront-exterior.jpg?q=w_3200,h_1800,x_0,y_0,c_fill",
-      "area": "liverpoool",
+      "area": "Tbilisi",
       "actions": "open"
     },
     {
       "id": 2,
-      "title": "please i want to have job as an angular developer",
-      "price": "10225",
-      "description": "luka",
+      "title": "Holiday Inn Tbilisi, an IHG hotel",
+      "price": 105,
+      "description": "very luxury hotel",
       "imageUrl": "https://cf.bstatic.com/images/hotel/max1024x768/218/218892197.jpg",
-      "area": "JKNVDJLN",
+      "area": "Tbilisi",
       "actions": "open"
     },
     {
       "id": 3,
-      "title": "georgian bank",
-      "price": "100000",
-      "description": "hopefully i have excellent interview ",
+      "title": "Sheraton Grand Tbilisi Metechi Palace33333",
+      "price": 200,
+      "description": "in most popula district in tbilisi with very nice view",
       "imageUrl": "https://cache.marriott.com/marriottassets/marriott/TBSSI/tbssi-exterior-8483-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*",
-      "area": "zoom",
+      "area": "Tbilisi",
+      "actions": "open"
+    },
+    {
+      "id": 4,
+      "title": "lukaaaaaaaa",
+      "price": 1000,
+      "description": "also with very nice view with pool gym wifi and parking",
+      "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/88/ef/90/exterior-view.jpg",
+      "area": "Tbilisi",
       "actions": "open"
     }
   ]

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './features/mainlayout/header/header.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './features/pages/home/home.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -18,6 +18,14 @@ import { AddFormDialogComponent } from './features/partials/add-form-dialog/add-
 import {MatInputModule} from '@angular/material/input';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { EditFormComponent } from './features/partials/edit-form/edit-form.component';
+import { ErrorhandlerInterceptor } from './core/interceptors/errorhandler.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { DeleteComponent } from './features/partials/delete/delete.component';
+import { RegisterComponent } from './features/partials/register/register.component';
+import { LoginComponent } from './features/partials/login/login.component';
+import {MatIconModule} from '@angular/material/icon';
+import {AngularFireModule} from '@angular/fire/compat';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +34,10 @@ import { EditFormComponent } from './features/partials/edit-form/edit-form.compo
     HomeComponent,
     DialogoptionsComponent,
     AddFormDialogComponent,
-    EditFormComponent
+    EditFormComponent,
+    DeleteComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -41,9 +52,25 @@ import { EditFormComponent } from './features/partials/edit-form/edit-form.compo
     MatMenuModule,
     MatInputModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatIconModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyBZxC1UTYK8nR30rW_FFPru3b97eWvoLgA",
+      authDomain: "crystal-cove-8361f.firebaseapp.com",
+      projectId: "crystal-cove-8361f",
+      storageBucket: "crystal-cove-8361f.appspot.com",
+      messagingSenderId: "364323934851",
+      appId: "1:364323934851:web:cd42aa0618c717078ec1b6"
+    }),
+    // BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+      timeOut: 3000
+    })
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: ErrorhandlerInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

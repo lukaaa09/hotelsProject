@@ -27,8 +27,8 @@
 
   </div>
   <div class="profile">
-    <button (click)="logOut()">Log out</button>
-    <div  class="icon-section">
+    <button *ngIf="isLoggedIn" (click)="logOut()">Log out</button>
+    <div *ngIf="!isLoggedIn " class="icon-section">
       <i class="bi bi-bell"></i>
       <i class="bi bi-person-fill-add" (click)="openRegisterDialog()"></i>
       <i class="bi bi-gear-wide-connected"></i>

@@ -16,7 +16,9 @@ export class HeaderComponent implements OnInit{
   ngOnInit() {
   }
 
-
+  get isLoggedIn() {
+    return this._authService.isLoggedIn
+  }
 
   public openRegisterDialog() {
     const dialogRef = this._dialog.open(RegisterComponent, {restoreFocus: false});
@@ -24,5 +26,6 @@ export class HeaderComponent implements OnInit{
   }
 
   logOut() {
+    this._authService.logOutUser()
   }
 }

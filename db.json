@@ -1,4 +1,14 @@
 {
+  "users": [
+    {
+      "email": "luk@gmail.com",
+      "password": "$2a$10$Lgy4RnND7XvL9IihjY/7O.LyRjUS2Whxhcx81kecL7sKakCLlRRhm",
+      "name": "luka",
+      "lastname": "kurta",
+      "confirmPassword": "12345",
+      "id": 1
+    }
+  ],
   "hotels": [
     {
       "id": 1,
@@ -35,15 +45,6 @@
       "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/88/ef/90/exterior-view.jpg",
       "area": "Tbilisi",
       "actions": "open"
-    }
-  ],
-  "users": [
-    {
-      "name": "dkckec",
-      "lastname": "midvmv",
-      "email": "rneh@gmail.com",
-      "password": "emvrjeve",
-      "confirmPassword": "oimirevemvoke"
     }
   ]
 }

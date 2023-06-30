@@ -1,7 +1,7 @@
 <div class="container">
   <div class="back"></div>
   <div class="form">
-    <form>
+    <form [formGroup]="userRegisterFormGroup">
       <div class="form">
         <div class="welcome">
           <h1>Register</h1>
@@ -11,32 +11,44 @@
         <mat-form-field class="example-form-field">
           <mat-label>Name</mat-label>
           <input matInput
-                 type="text">
+                 type="text"
+                 formControlName="name">
         </mat-form-field>
 
         <mat-form-field class="example-form-field">
           <mat-label>Lastname</mat-label>
-          <input matInput type="text">
+          <input matInput
+                 type="text"
+                 formControlName="lastname">
         </mat-form-field>
 
         <mat-form-field class="example-form-field">
           <mat-label>Email</mat-label>
-          <input matInput type="text" #email>
+          <input matInput
+                 type="text"
+                 formControlName="email"
+          >
         </mat-form-field>
 
         <mat-form-field class="example-form-field">
           <mat-label>Password</mat-label>
-          <input matInput type="text" #password>
+          <input matInput
+                 type="text"
+                 formControlName="password"
+          >
         </mat-form-field>
 
         <mat-form-field class="example-form-field">
           <mat-label>Confirm Password</mat-label>
-          <input matInput type="text">
+          <input matInput
+                 type="text"
+                 formControlName="confirmPassword"
+          >
         </mat-form-field>
       </div>
 
       <div class="footer">
-        <button class="btn" (click)="onSignUp(email.value, password.value)">Create Account</button>
+        <button class="btn" (click)="registerUser()">Create Account</button>
         <span>Already register? <a (click)="openLoginDialog()">Login</a></span>
       </div>
     </form>

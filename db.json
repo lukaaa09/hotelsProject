@@ -36,5 +36,14 @@
       "area": "Tbilisi",
       "actions": "open"
     }
+  ],
+  "users": [
+    {
+      "name": "dkckec",
+      "lastname": "midvmv",
+      "email": "rneh@gmail.com",
+      "password": "emvrjeve",
+      "confirmPassword": "oimirevemvoke"
+    }
   ]
 }

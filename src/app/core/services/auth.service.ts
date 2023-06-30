@@ -1,36 +1,25 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { HttpClient } from '@angular/common/http';
+import { RegisterUser } from '../models/register.user';
+import { Observable } from 'rxjs';
+import { LoginUser } from '../models/login.user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private baseUrl = 'http://localhost:3000'
 
-  isLoggedIn = false
-
-  constructor(private _firebaseAuth: AngularFireAuth) {
-    if(localStorage.getItem('user')) {
-      this.isLoggedIn = true
-    }
+  constructor(private _http: HttpClient) {
   }
 
-  async signIn(email: string, password: string) {
-    await this._firebaseAuth.signInWithEmailAndPassword(email, password).then( res => {
-      this.isLoggedIn = true
-      localStorage.setItem('user', JSON.stringify(res.user))
-    })
+  RegisterUser(user: RegisterUser): Observable<RegisterUser> {
+   return  this._http.post<RegisterUser>(`${this.baseUrl}/register`, user)
   }
 
-  async signUp(email: string, password: string) {
-    await this._firebaseAuth.createUserWithEmailAndPassword(email, password).then( res => {
-      this.isLoggedIn = true
-      localStorage.setItem('user', JSON.stringify(res.user))
-    })
-  }
-
-  logOut() {
-    this._firebaseAuth.signOut()
-    this.isLoggedIn = false
-    localStorage.removeItem('user')
+  loginUser(user: LoginUser): Observable<LoginUser> {
+    return this._http.post<LoginUser>(`${this.baseUrl}/login`, user)
   }
 }
+

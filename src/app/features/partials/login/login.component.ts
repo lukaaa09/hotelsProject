@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { RegisterComponent } from '../register/register.component';
 import { AuthService } from '../../../core/services/auth.service';
+import { FormControl, FormGroup } from '@angular/forms';
+import { LoginUser } from '../../../core/models/login.user.model';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +13,11 @@ import { AuthService } from '../../../core/services/auth.service';
 })
 export class LoginComponent implements OnInit{
 
+  loginForm = new  FormGroup({
+    email: new FormControl(''),
+    password: new FormControl('')
+  })
+
   constructor(private _dialogRef: MatDialogRef<any>,
               private _dialog: MatDialog,
               private _authService: AuthService) {
@@ -17,12 +25,16 @@ export class LoginComponent implements OnInit{
 
   ngOnInit() {
   }
-  async onSignIp(email: string, password: string) {
-    await this._authService.signIn(email, password)
-    if (this._authService.isLoggedIn) {
-      this._dialogRef.close()
-    }
+
+  loginUser() {
+    this._authService.loginUser(this.loginForm.value as LoginUser).pipe(
+      tap((response) => {
+        localStorage.setItem('token', response.accessToken)
+        this._dialogRef.close()
+      })
+    ).subscribe()
   }
+
 
   openRegisterDialog() {
     this._dialogRef.close()

@@ -10,13 +10,21 @@ import { LoginUser } from '../models/login.user.model';
 })
 export class AuthService {
   private baseUrl = 'http://localhost:3000'
-  isLoggedIn = false
+  private _isLoggedIn = false
 
 
   constructor(private _http: HttpClient) {
     if (localStorage.getItem('token')) {
-      this.isLoggedIn = true
+      this._isLoggedIn = true
     }
+  }
+
+  public get isLoggedIn() {
+    return this._isLoggedIn
+  }
+
+  public set isLoggedIn(val) {
+    this._isLoggedIn = val
   }
 
   RegisterUser(user: RegisterUser): Observable<RegisterUser> {

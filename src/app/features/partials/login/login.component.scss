@@ -1,3 +1,14 @@
+:host{
+  ::ng-deep{
+    mat-form-field{
+      .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+        width: 300px;
+        background: none;
+        border-bottom: 2px solid #babdba;
+      }
+    }
+  }
+}
 .content {
   display: flex;
   justify-content: space-around;

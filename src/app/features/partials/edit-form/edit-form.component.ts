@@ -24,7 +24,11 @@ export class EditFormComponent implements OnInit{
       description: new FormControl(this.hotel.description, [Validators.required] ),
       imageUrl: new FormControl(this.hotel.imageUrl, [Validators.required] ),
       area: new FormControl(this.hotel.area, [Validators.required]),
-      actions: new FormControl(this.hotel.actions, [Validators.required])
+      actions: new FormControl(this.hotel.actions, [Validators.required]),
+      thirdImage: new FormControl(this.hotel.thirdImage, [Validators.required]),
+      fourthImage: new FormControl(this.hotel.fourthImage, [Validators.required]),
+      secondImage: new FormControl(this.hotel.secondImage, [Validators.required]),
+      fifthImage: new FormControl(this.hotel.fifthImage, [Validators.required]),
     })
   }
 

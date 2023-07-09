@@ -10,6 +10,7 @@ import {filter} from 'rxjs';
 import { AddFormDialogComponent } from '../../partials/add-form-dialog/add-form-dialog.component';
 import { EditFormComponent } from '../../partials/edit-form/edit-form.component';
 import { DeleteComponent } from '../../partials/delete/delete.component';
+import { Route, Router } from '@angular/router';
 
 
 @Component({
@@ -25,7 +26,9 @@ export class HomeComponent implements OnInit{
   selection = new SelectionModel<HotelModel>(true, []);
   @ViewChild('menuTrigger') menuTrigger: MatMenuTrigger | undefined;
 
-  constructor(private _hotelsService: HotelsService, public dialog: MatDialog) {
+  constructor(private _hotelsService: HotelsService,
+              public dialog: MatDialog,
+              private router: Router ) {
   }
 
   ngOnInit(): void {
@@ -41,6 +44,10 @@ export class HomeComponent implements OnInit{
           description: hotel.description,
           actions: hotel.actions,
           isHovered: hotel.isHovered,
+          secondImage: hotel.secondImage,
+          thirdImage: hotel.thirdImage,
+          fourthImage: hotel.fourthImage,
+          fifthImage: hotel.fifthImage
         }
       })
     })
@@ -52,9 +59,8 @@ export class HomeComponent implements OnInit{
     return numSelected === numRows;
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(DialogoptionsComponent, {restoreFocus: false});
-    dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
+  openDetailsPage(id: number) {
+    this.router.navigateByUrl(`/hotelDetails/${id}`).then()
   }
 
   deleteItemDialog(id: number) {

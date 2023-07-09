@@ -25,6 +25,7 @@ import { RegisterComponent } from './features/partials/register/register.compone
 import { LoginComponent } from './features/partials/login/login.component';
 import {MatIconModule} from '@angular/material/icon';
 import {AngularFireModule} from '@angular/fire/compat';
+import { HotelDetailsComponent } from './features/pages/hotel-details/hotel-details.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {AngularFireModule} from '@angular/fire/compat';
     EditFormComponent,
     DeleteComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    HotelDetailsComponent
   ],
   imports: [
     BrowserModule,

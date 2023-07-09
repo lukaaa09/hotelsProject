@@ -5,6 +5,7 @@ import { AuthService } from '../../../core/services/auth.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { LoginUser } from '../../../core/models/login.user.model';
 import { tap } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit{
 
   constructor(private _dialogRef: MatDialogRef<any>,
               private _dialog: MatDialog,
+              private _toastr: ToastrService,
               private _authService: AuthService) {
   }
 
@@ -30,7 +32,9 @@ export class LoginComponent implements OnInit{
     this._authService.loginUser(this.loginForm.value as LoginUser).pipe(
       tap((response) => {
         localStorage.setItem('token', response.accessToken)
+        this._authService.isLoggedIn = true
         this._dialogRef.close()
+        this._toastr.success('Successfully Login')
       })
     ).subscribe()
   }

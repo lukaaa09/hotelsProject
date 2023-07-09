@@ -5,6 +5,10 @@ export interface HotelModel {
   area: string,
   description: string,
   imageUrl: string,
+  secondImage: string,
+  thirdImage: string,
+  fourthImage: string,
+  fifthImage: string,
   actions: string,
   isHovered: boolean;
 }

@@ -11,4 +11,5 @@ export interface HotelModel {
   fifthImage: string,
   actions: string,
   isHovered: boolean;
+  owner: string
 }

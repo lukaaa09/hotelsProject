@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit{
     email: new FormControl(''),
     password: new FormControl(''),
     confirmPassword: new FormControl(''),
+    username: new FormControl(''),
   })
 
   constructor(private dialogRef: MatDialogRef<any>,

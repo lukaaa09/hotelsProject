@@ -38,6 +38,9 @@
 
 <div class="search-header">
   <div class="icons">
-    <i class="bi bi-search">Search</i>
+    <i class="bi bi-search"></i>
+    <input type="text" placeholder="search your favourite hotels" [(ngModel)]="searchText" (input)="onSearch()">
+    <button class="search-button"> search</button>
+    <i class="bi bi-arrow-right"></i>
   </div>
 </div>

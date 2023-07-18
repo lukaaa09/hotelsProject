@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RegisterComponent } from '../../partials/register/register.component';
 import { AuthService } from '../../../core/services/auth.service';
+import { ToastrService } from 'ngx-toastr';
+import { SearchService } from '../../../core/services/search.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,12 @@ import { AuthService } from '../../../core/services/auth.service';
 })
 export class HeaderComponent implements OnInit{
 
-  constructor(public _dialog: MatDialog, private _authService: AuthService) {
+  searchText!: string
+
+  constructor(public _dialog: MatDialog,
+              private _authService: AuthService,
+              private _toastr: ToastrService,
+              private _searchService: SearchService) {
   }
 
   ngOnInit() {
@@ -27,5 +34,10 @@ export class HeaderComponent implements OnInit{
 
   logOut() {
     this._authService.logOutUser()
+    this._toastr.info('successfully log out')
+  }
+
+  onSearch() {
+    this._searchService.emitSearchChanged(this.searchText)
   }
 }

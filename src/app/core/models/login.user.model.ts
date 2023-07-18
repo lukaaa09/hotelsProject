@@ -1,5 +1,6 @@
+import { RegisterUser } from './register.user';
+
 export interface LoginUser {
-  email: string,
-  password: string,
-  accessToken: string
+  accessToken: string,
+  user: RegisterUser
 }

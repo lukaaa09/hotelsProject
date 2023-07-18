@@ -4,7 +4,7 @@ import { RegisterComponent } from '../register/register.component';
 import { AuthService } from '../../../core/services/auth.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { LoginUser } from '../../../core/models/login.user.model';
-import { tap } from 'rxjs';
+import { catchError, of, tap } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -32,9 +32,13 @@ export class LoginComponent implements OnInit{
     this._authService.loginUser(this.loginForm.value as LoginUser).pipe(
       tap((response) => {
         localStorage.setItem('token', response.accessToken)
+        localStorage.setItem('username', response.user.username)
         this._authService.isLoggedIn = true
         this._dialogRef.close()
         this._toastr.success('Successfully Login')
+      }),
+      catchError(() => {
+        return of (this._toastr.error('invalid email or password'))
       })
     ).subscribe()
   }

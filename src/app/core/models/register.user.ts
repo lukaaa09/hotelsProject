@@ -3,5 +3,6 @@ export interface RegisterUser {
   lastname: string,
   email: string,
   password: string,
-  confirmPassword: string
+  confirmPassword: string,
+  username: string
 }

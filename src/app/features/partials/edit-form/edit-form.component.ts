@@ -11,6 +11,7 @@ import { HotelsService } from '../../../core/services/hotels.service';
 })
 export class EditFormComponent implements OnInit{
   formGroup = new FormGroup<any>('')
+  username = localStorage.getItem('username')
   constructor(@Inject(MAT_DIALOG_DATA) public hotel: HotelModel,
               private _hotelsService: HotelsService,
               private  _dialogRef: MatDialogRef<any>) {
@@ -29,6 +30,7 @@ export class EditFormComponent implements OnInit{
       fourthImage: new FormControl(this.hotel.fourthImage, [Validators.required]),
       secondImage: new FormControl(this.hotel.secondImage, [Validators.required]),
       fifthImage: new FormControl(this.hotel.fifthImage, [Validators.required]),
+      owner: new FormControl(this.username)
     })
   }
 

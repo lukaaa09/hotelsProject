@@ -5,12 +5,13 @@ import {MatTableDataSource} from '@angular/material/table';
 import { HotelModel } from '../../../core/models/hotel.model';
 import { MatDialog } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
-import { DialogoptionsComponent } from '../../partials/dialogoptions/dialogoptions.component';
-import {filter} from 'rxjs';
 import { AddFormDialogComponent } from '../../partials/add-form-dialog/add-form-dialog.component';
 import { EditFormComponent } from '../../partials/edit-form/edit-form.component';
 import { DeleteComponent } from '../../partials/delete/delete.component';
 import { Route, Router } from '@angular/router';
+import { AuthService } from '../../../core/services/auth.service';
+import { ToastrService } from 'ngx-toastr';
+import { SearchService } from '../../../core/services/search.service';
 
 
 @Component({
@@ -26,12 +27,18 @@ export class HomeComponent implements OnInit{
   selection = new SelectionModel<HotelModel>(true, []);
   @ViewChild('menuTrigger') menuTrigger: MatMenuTrigger | undefined;
 
+  public username = localStorage.getItem('username')
+
   constructor(private _hotelsService: HotelsService,
+              private _authService: AuthService,
+              private _toastr: ToastrService,
               public dialog: MatDialog,
-              private router: Router ) {
+              private router: Router,
+              private _searchService: SearchService) {
   }
 
   ngOnInit(): void {
+    console.log(this.username)
     this._hotelsService.getHotels().subscribe(data => {
       this.hotels = data
       this.dataSource.data = this.hotels.map((hotel, index) => {
@@ -47,9 +54,14 @@ export class HomeComponent implements OnInit{
           secondImage: hotel.secondImage,
           thirdImage: hotel.thirdImage,
           fourthImage: hotel.fourthImage,
-          fifthImage: hotel.fifthImage
+          fifthImage: hotel.fifthImage,
+          owner: hotel.owner
         }
       })
+      console.log(this.dataSource.data)
+    })
+    this._searchService.searchChanged.subscribe((searchText: string) => {
+      this.dataSource.filter = searchText.trim().toLowerCase()
     })
   }
 
@@ -66,42 +78,61 @@ export class HomeComponent implements OnInit{
   deleteItemDialog(id: number) {
     const selectedHotel = this.dataSource.data.find((hotel) => hotel.id === id);
 
-    const dialogRef = this.dialog.open(DeleteComponent, {
-      data: selectedHotel
-    });
-    dialogRef.afterClosed().subscribe(() => {
-      this.dataSource.data = this.dataSource.data.filter((hotels) => hotels.id !== id)
-    });
+    if(selectedHotel?.owner === this.username) {
+      const dialogRef = this.dialog.open(DeleteComponent, {
+        data: selectedHotel
+      });
+
+
+      dialogRef.afterClosed().subscribe((checkIfItemIsDeleted: boolean) => {
+        if (checkIfItemIsDeleted) {
+          this.dataSource.data = this.dataSource.data.filter((hotels) => hotels.id !== id)
+        }
+      });
+    }else {
+      this._toastr.error('You can only delete hotels added by yourself')
+    }
   }
 
   openEditForm(id: number) {
     const selectedHotel = this.dataSource.data.filter((hotel) => hotel.id === id)
 
-    const dialogRef = this.dialog.open(EditFormComponent, {
-      data: selectedHotel[0]
-    });
-    dialogRef.afterClosed().subscribe( result => {
-      if (result) {
-        this.dataSource.data = this.dataSource.data.map((res) => {
-          if (res.id === result.id) {
-            return result
-          }
-          return res
-        })
-      }
-    } );
+    if(selectedHotel[0].owner === this.username) {
+      const dialogRef = this.dialog.open(EditFormComponent, {
+        data: selectedHotel[0]
+      });
+      dialogRef.afterClosed().subscribe( result => {
+        if (result) {
+          this.dataSource.data = this.dataSource.data.map((res) => {
+            if (res.id === result.id) {
+              return result
+            }
+            return res
+          })
+        }
+      } );
+    }else {
+      this._toastr.error('You can only update hotels added by yourself')
+
+    }
   }
 
   openFormDialog() {
-    const dialogRef = this.dialog.open(AddFormDialogComponent);
+    if (this._authService.isLoggedIn) {
+      const dialogRef = this.dialog.open(AddFormDialogComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result )
-      if (result) {
-        this.hotels.push(result)
-        this.dataSource.data = this.hotels
-      }
-    });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(result )
+        if (result) {
+
+          result.owner = this.username
+          this.hotels.push(result)
+          this.dataSource.data = this.hotels
+        }
+      });
+    }else {
+      this._toastr.error('If you want to add hotel you must register')
+    }
   }
 
   toggleAllRows() {

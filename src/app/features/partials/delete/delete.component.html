@@ -4,7 +4,7 @@
     <span>You Can't undone this action</span>
   </div>
   <div class="delete-action">
-    <button mat-dialog-close>NO</button>
+    <button mat-dialog-close (click)="cancelDelete()">NO</button>
     <button class="fill" (click)="deleteItem()">Yes</button>
   </div>
 </div>

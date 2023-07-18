@@ -7,6 +7,33 @@
       "lastname": "kurta",
       "confirmPassword": "12345",
       "id": 1
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$5fIntXnWqhgq7RimJEEfne01WV7bFc.1mFyHts8E6I0GIDdCsgdwO",
+      "name": "luka",
+      "lastname": "kurtanidze",
+      "confirmPassword": "1234",
+      "username": "lukacho",
+      "id": 2
+    },
+    {
+      "email": "lela@gmail.com",
+      "password": "$2a$10$Jd0yi1lSkBfjK3H8MAlUX.igHrraDdUnvKt.hMQoAJbjX4PMlJQCW",
+      "name": "lela",
+      "lastname": "kurtanidze",
+      "confirmPassword": "12345",
+      "username": "lelako",
+      "id": 3
+    },
+    {
+      "email": "angular@gmail.com",
+      "password": "$2a$10$x2Pzk33X5RcgolWDiB1UBuGREee0NDue4ePZ6IBsxBrqk4wdQXElu",
+      "name": "lukacho",
+      "lastname": "kurtanidze",
+      "confirmPassword": "1111",
+      "username": "lukacho-dev",
+      "id": 4
     }
   ],
   "hotels": [
@@ -61,6 +88,19 @@
       "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
       "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720"
+    },
+    {
+      "id": "8",
+      "title": "c hwc he",
+      "price": "9999",
+      "description": "hche chewc hcece",
+      "imageUrl": "nccbhwessssssssssssssscece",
+      "area": "hcechjncewj",
+      "actions": "open",
+      "thirdImage": null,
+      "fourthImage": null,
+      "secondImage": null,
+      "fifthImage": null
     }
   ]
 }

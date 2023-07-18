@@ -20,7 +20,10 @@ export class DeleteComponent implements OnInit{
   }
   deleteItem() {
     this._hotelsService.deleteHotels(this.hotel.id).subscribe(() => {
-      this._dialogRef.close()
+      this._dialogRef.close(true)
     })
+  }
+  cancelDelete() {
+    this._dialogRef.close(false);
   }
 }

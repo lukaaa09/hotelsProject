@@ -13,6 +13,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class AddFormDialogComponent implements OnInit{
 
   formGroup = new FormGroup<any>('')
+  public username = localStorage.getItem('username')
+
 
   constructor(private _hotelsService: HotelsService, private dialogRef: MatDialogRef<any>) {
   }
@@ -26,13 +28,14 @@ export class AddFormDialogComponent implements OnInit{
       imageUrl: new FormControl('', [Validators.required] ),
       area: new FormControl('', [Validators.required]),
       actions: new FormControl('', [Validators.required]),
+      owner: new FormControl(this.username)
 
     })
 
   }
 
   addHotel(): void {
-    this._hotelsService.addHotel(this.formGroup.value as AddHotelModel).subscribe(res => {
+    this._hotelsService.addHotel(this.formGroup.value as HotelModel).subscribe(res => {
       this.dialogRef.close(res)
       console.log(res)
     })

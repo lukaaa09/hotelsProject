@@ -2,19 +2,26 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './features/pages/home/home.component';
 import { HotelDetailsComponent } from './features/pages/hotel-details/hotel-details.component';
+import { MainpageComponent } from './features/pages/mainpage/mainpage.component';
+import { CategoryComponent } from './features/pages/category/category.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'hotels',
     pathMatch: 'full'
+  },
+  {
+    path: 'hotels',
+    component: MainpageComponent
+  },
+  {
+  path: 'hotelDetails/:id',
+    component: HotelDetailsComponent
   },
   {
     path: 'home',
     component: HomeComponent
-  },{
-  path: 'hotelDetails/:id',
-    component: HotelDetailsComponent
   }
 ];
 

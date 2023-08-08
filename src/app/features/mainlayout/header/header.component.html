@@ -20,6 +20,11 @@
   </div>
   <div class="content">
     <h1 routerLink="/home" >Crystal Cove</h1>
+
+    <i class="bi bi-search"></i>
+      <input type="text" placeholder="search your favourite hotels" [(ngModel)]="searchText" (input)="onSearch()">
+      <button class="search-button"> search</button>
+    <i class="bi bi-arrow-right"></i>
   </div>
   <div class="report">
     <span>Report Exporting</span>
@@ -36,11 +41,87 @@
   </div>
 </div>
 
+<!--<div class="search-header" *ngFor="let items of categories">-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-tsunami"></i>-->
+<!--    <span>Island</span>-->
+<!--  </div>-->
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-brightness-alt-high"></i>-->
+<!--    <span>Beach Front</span>-->
+<!--  </div>-->
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-house-fill"></i>-->
+<!--    <span>Cabins</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-water"></i>-->
+<!--    <span>Amazing pools</span>-->
+<!--  </div>-->
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-cloud-rain-heavy-fill"></i>-->
+<!--    <span>Tropical</span>-->
+<!--  </div>-->
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-fire"></i>-->
+<!--    <span>Trending</span>-->
+<!--  </div>-->
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-cup-hot-fill"></i>-->
+<!--    <span>Breakfast</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-bank"></i>-->
+<!--    <span>Capital Cities</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-key"></i>-->
+<!--    <span>New</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-controller"></i>-->
+<!--    <span>Gambling Cities</span>-->
+<!--  </div>-->
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-file-image-fill"></i>-->
+<!--    <span>Mountains</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-snow3"></i>-->
+<!--    <span>Arctic</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-umbrella"></i>-->
+<!--    <span>Desert</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-tree-fill"></i>-->
+<!--    <span>National Parks</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-gem"></i>-->
+<!--    <span>Luxury</span>-->
+<!--  </div>-->
+
+<!--  <div class="icons">-->
+<!--    <i class="bi bi-file-music-fill"></i>-->
+<!--    <span>Club Cities</span>-->
+<!--  </div>-->
 <div class="search-header">
-  <div class="icons">
-    <i class="bi bi-search"></i>
-    <input type="text" placeholder="search your favourite hotels" [(ngModel)]="searchText" (input)="onSearch()">
-    <button class="search-button"> search</button>
-    <i class="bi bi-arrow-right"></i>
+  <div class="icons" *ngFor="let category of categories" >
+    <i [class]="'bi bi-' + category.categoryIcon"></i>
+    <span>{{ category.category }}</span>
   </div>
+  <i class="arr bi bi-arrow-right-circle-fill"></i>
 </div>
+
+<!--</div>-->

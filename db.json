@@ -34,6 +34,15 @@
       "confirmPassword": "1111",
       "username": "lukacho-dev",
       "id": 4
+    },
+    {
+      "email": "lk@gmail.com",
+      "password": "$2a$10$QdwV0PPa2wZMZQPCgt0CleF2G7leKuC4tZ2r80le90FbNQdjjthIW",
+      "name": "lkdjkhd",
+      "lastname": "kurt",
+      "confirmPassword": "1234",
+      "username": "lukaluka",
+      "id": 5
     }
   ],
   "hotels": [
@@ -47,8 +56,10 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
       "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/210517162938-underscored-marriott-virginia-beach-oceanfront-exterior.jpg?q=w_3200,h_1800,x_0,y_0,c_fill",
-      "area": "Tbilisi",
-      "actions": "open"
+      "area": "France, Paris",
+      "actions": "open",
+      "category": "island",
+      "categoryIcon": "tsunami"
     },
     {
       "id": 2,
@@ -60,8 +71,10 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
       "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
-      "area": "Tbilisi",
-      "actions": "open"
+      "area": "Ukraine, Kyev",
+      "actions": "open",
+      "category": "beachFront",
+      "categoryIcon": "brightness-alt-high"
     },
     {
       "id": 3,
@@ -73,8 +86,10 @@
       "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
       "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
       "imageUrl": "https://cache.marriott.com/marriottassets/marriott/TBSSI/tbssi-exterior-8483-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*",
-      "area": "Tbilisi",
-      "actions": "open"
+      "area": "Georgia, Tbilisi",
+      "actions": "open",
+      "category": "cabins",
+      "categoryIcon": "house-fill"
     },
     {
       "id": 4,
@@ -82,25 +97,202 @@
       "price": 1000,
       "description": "also with very nice view with pool gym wifi and parking",
       "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/88/ef/90/exterior-view.jpg",
-      "area": "Tbilisi222",
+      "area": "Georgia, Tbilisi",
       "actions": "open",
       "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
       "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
       "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
-      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720"
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "pools",
+      "categoryIcon": "water"
+
     },
     {
-      "id": "8",
-      "title": "c hwc he",
-      "price": "9999",
-      "description": "hche chewc hcece",
-      "imageUrl": "nccbhwessssssssssssssscece",
-      "area": "hcechjncewj",
+      "id": 5,
+      "title": "very luxury hotel in capital of turkey",
+      "price": 928,
+      "description": "Mermaid Suite - Toca da Capuava Granja Viana Cotia\n",
+      "imageUrl": "https://www.lux-review.com/wp-content/uploads/2019/09/turkish-hotel.jpg",
+      "area": "Turkey, Ankara",
       "actions": "open",
-      "thirdImage": null,
-      "fourthImage": null,
-      "secondImage": null,
-      "fifthImage": null
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "tropical",
+      "categoryIcon": "cloud-rain-heavy-fill"
+
+    },
+    {
+      "id": 6,
+      "title": "Cheerful 1-bedroom in a townhouse with parking",
+      "price": 428,
+      "description": "Room in a townhouse hosted by Christi-Anna",
+      "imageUrl": "https://www.welcome-hotels.com/site/assets/files/35059/welcome_hotel_marburg_lobby_2k.2560x1600.jpg",
+      "area": "England, London",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "trending",
+      "categoryIcon": "fire"
+
+    },
+    {
+      "id": 7,
+      "title": "The Granary, Rustic Modern Barn Conversion",
+      "price": 898,
+      "description": "Room in a barn hosted by Michelle & Michael",
+      "imageUrl": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2Fddf26318-8b66-11ed-b43e-9b7550101422.jpg?crop=5000%2C2812%2C0%2C260",
+      "area": "England, Liverpool",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "breakfast",
+      "categoryIcon": "cup-hot-fill"
+
+    },
+    {
+      "id": 8,
+      "title": "Small private room",
+      "price": 28,
+      "description": "Room in a home hosted by Varinia",
+      "imageUrl": "https://images.trvl-media.com/hotels/48000000/47020000/47019200/47019139/c28d6abc_z.jpg",
+      "area": "USA, California",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "capitalCities",
+      "categoryIcon": "bank"
+    },
+    {
+      "id": 9,
+      "title": "Villa Silvi luxury hot tube sauna pool lake view",
+      "price": 928,
+      "description": "Mermaid Suite - Toca da Capuava Granja Viana Cotia",
+      "imageUrl": "https://content.r9cdn.net/himg/63/1e/98/ice-112274-62736666_3XL-301270.jpg",
+      "area": "Brazil, Rio De Janeiro",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "new",
+      "categoryIcon": "key"
+
+    },
+    {
+      "id": 10,
+      "title": "Big bright room in beautiful apartment",
+      "price": 928,
+      "description": "Room in a rental unit hosted by Annie",
+      "imageUrl": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/374885186.jpg?k=ad23455ce1670aa627c2f91cc930f084a88040969a8dea73a1668aa7e3f4c628&o=&hp=1",
+      "area": "Poland, Warsaw",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "gambilng",
+      "categoryIcon": "controller"
+
+    },
+    {
+      "id": 11,
+      "title": "Private double room",
+      "price": 928,
+      "description": "Room in a home hosted by Adriana",
+      "imageUrl": "https://www.asperahotel.com/wp-content/uploads/2022/05/aspera-hotel-g_k.jpg",
+      "area": "Turkey, Stambul",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "mountains",
+      "categoryIcon": "file-image-fill"
+    },
+    {
+      "id": 12,
+      "title": "Big bright room in beautiful apartment",
+      "price": 928,
+      "description": "Room in a rental unit hosted by Annie",
+      "imageUrl": "https://www.wisconsinhistory.org/WHPD-Images/web/225018.jpg",
+      "area": "England, London",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "arctic",
+      "categoryIcon": "snow3"
+
+    },
+    {
+      "id": 13,
+      "title": "Protaras Holiday Villa TI39",
+      "price": 90,
+      "imageUrl": "https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg",
+      "description": "Entire villa hosted by Xenios",
+      "area": "USA, new york",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "desert",
+      "categoryIcon": "umbrella"
+    },
+    {
+      "id": 14,
+      "title": "Protaras long very nice dude  Villa TI39",
+      "price": 9022,
+      "imageUrl": "https://www.fodors.com/wp-content/uploads/2022/10/Aramness_120.jpeg",
+      "description": "Entire villa hosted by Xenios",
+      "area": "USA, california",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "parks",
+      "categoryIcon": "tree-fill"
+
+    },
+    {
+      "id": 15,
+      "title": "liverpool return very school tbilisi",
+      "price": 2122,
+      "imageUrl": "https://images.trvl-media.com/lodging/1000000/20000/19000/18952/93f5d520_w.jpg",
+      "description": "Entire villa hosted by Xenios",
+      "area": "tbilisi, california",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "luxury",
+      "categoryIcon": "gem"
+    },
+    {
+      "id": 15,
+      "title": "with nice view in cypros and arabia ",
+      "price": 982,
+      "imageUrl": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/22443290.jpg?k=ea72ebbd18972a57df7d0894168904b7abf1d0d1e4e84dadcaee0d4278f467ff&o=&hp=1",
+      "description": "Entire villa hosted by Xenios",
+      "area": "tbilisi, california",
+      "actions": "open",
+      "thirdImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "fourthImage": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "secondImage": "https://hotelxtoronto.com/_novaimg/4906918-1481330_0_0_2200_1200_2200_1200.rc.jpg",
+      "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
+      "category": "club",
+      "categoryIcon": "file-music-fill"
     }
   ]
 }

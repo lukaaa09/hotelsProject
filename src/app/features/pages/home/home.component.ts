@@ -11,7 +11,7 @@ import { DeleteComponent } from '../../partials/delete/delete.component';
 import { Route, Router } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
 import { ToastrService } from 'ngx-toastr';
-import { SearchService } from '../../../core/services/search.service';
+import { SharedService } from '../../../core/services/shared.service';
 
 
 @Component({
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit{
               private _toastr: ToastrService,
               public dialog: MatDialog,
               private router: Router,
-              private _searchService: SearchService) {
+              private _searchService: SharedService) {
   }
 
   ngOnInit(): void {
@@ -55,7 +55,11 @@ export class HomeComponent implements OnInit{
           thirdImage: hotel.thirdImage,
           fourthImage: hotel.fourthImage,
           fifthImage: hotel.fifthImage,
-          owner: hotel.owner
+          owner: hotel.owner,
+          category: hotel.category,
+          categoryIcon: hotel.categoryIcon,
+          currentImageIndex: hotel.currentImageIndex
+
         }
       })
       console.log(this.dataSource.data)

@@ -1,9 +1,11 @@
 import { EventEmitter, Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SearchService {
+export class SharedService {
+  selectedCategory: EventEmitter<string> = new EventEmitter<string>()
   searchChanged: EventEmitter<string> = new EventEmitter<string>()
 
   constructor() { }
@@ -11,4 +13,10 @@ export class SearchService {
   emitSearchChanged(title: string): void {
     this.searchChanged.emit(title)
   }
+
+  emitSelectedCategory(category: string) {
+    this.selectedCategory.emit(category)
+  }
+
+
 }

@@ -26,6 +26,8 @@ import { LoginComponent } from './features/partials/login/login.component';
 import {MatIconModule} from '@angular/material/icon';
 import {AngularFireModule} from '@angular/fire/compat';
 import { HotelDetailsComponent } from './features/pages/hotel-details/hotel-details.component';
+import { MainpageComponent } from './features/pages/mainpage/mainpage.component';
+import { CategoryComponent } from './features/pages/category/category.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { HotelDetailsComponent } from './features/pages/hotel-details/hotel-deta
     DeleteComponent,
     RegisterComponent,
     LoginComponent,
-    HotelDetailsComponent
+    HotelDetailsComponent,
+    MainpageComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

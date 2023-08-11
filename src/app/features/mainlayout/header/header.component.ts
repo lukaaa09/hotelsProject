@@ -7,6 +7,7 @@ import { SharedService } from '../../../core/services/shared.service';
 import { HotelModel } from '../../../core/models/hotel.model';
 import { HotelsService } from '../../../core/services/hotels.service';
 import { Route, Router } from '@angular/router';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -14,8 +15,10 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
-  categories: HotelModel[] = []
+  categories: any[] = []
   searchText!: string
+  totalSkeleton: number = 16
+  isLoading = true
 
   constructor(public _dialog: MatDialog,
               private _authService: AuthService,
@@ -26,9 +29,14 @@ export class HeaderComponent implements OnInit{
   }
 
   ngOnInit() {
-    this._hotelsService.getHotels().subscribe(categories => {
-      this.categories = categories.map(category =>  category );
-    })
+    this._hotelsService.getCategories().pipe(
+      tap((categories) => {
+        setTimeout(() => {
+          this.categories = categories
+          this.isLoading = false
+        }, 2000)
+      })
+    ).subscribe()
   }
 
   // onCategoryClick(selectedCategory: string) {
@@ -36,6 +44,10 @@ export class HeaderComponent implements OnInit{
   //     this.categories = hotels.filter((hotel) => hotel.category === selectedCategory);
   //   });
   // }
+  chooseCategory(category: string) {
+    this._sharedService.emitSelectedCategory(category)
+  }
+
 
   get loggedIn() {
     return this._authService.isLoggedIn

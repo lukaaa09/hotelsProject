@@ -43,6 +43,96 @@
       "confirmPassword": "1234",
       "username": "lukaluka",
       "id": 5
+    },
+    {
+      "email": "comp@gmail.com",
+      "password": "$2a$10$EdxhITXJQRW.hLeS8sjCoOqdH7wW.izlLpNzSIsaRQU8z5azcp69m",
+      "name": "luka",
+      "lastname": "kurtanidze",
+      "confirmPassword": "12345",
+      "username": "lukakk",
+      "host": "",
+      "id": 6
+    },
+    {
+      "email": "live@gmail.com",
+      "password": "$2a$10$gMSz1lk7J/bMv18fegNG6uCzpM.EjNjTzp0bMgiPE/QXSeWZoNbqO",
+      "name": "luki",
+      "lastname": "kurtanidze",
+      "confirmPassword": "12345678",
+      "username": "liver",
+      "host": true,
+      "id": 7
+    }
+  ],
+  "categories": [
+    {
+      "category": "All Categories",
+      "categoryIcon": ""
+    },
+    {
+      "category": "island",
+      "categoryIcon": "tsunami"
+    },
+    {
+      "category": "beachFront",
+      "categoryIcon": "brightness-alt-high"
+    },
+    {
+      "category": "cabins",
+      "categoryIcon": "house-fill"
+    },
+    {
+      "category": "pools",
+      "categoryIcon": "water"
+    },
+    {
+      "category": "tropical",
+      "categoryIcon": "cloud-rain-heavy-fill"
+    },
+    {
+      "category": "trending",
+      "categoryIcon": "fire"
+    },
+    {
+      "category": "breakfast",
+      "categoryIcon": "cup-hot-fill"
+    },
+    {
+      "category": "capitalCities",
+      "categoryIcon": "bank"
+    },
+    {
+      "category": "new",
+      "categoryIcon": "key"
+    },
+    {
+      "category": "gambilng",
+      "categoryIcon": "controller"
+    },
+    {
+      "category": "mountains",
+      "categoryIcon": "file-image-fill"
+    },
+    {
+      "category": "arctic",
+      "categoryIcon": "snow3"
+    },
+    {
+      "category": "desert",
+      "categoryIcon": "umbrella"
+    },
+    {
+      "category": "parks",
+      "categoryIcon": "tree-fill"
+    },
+    {
+      "category": "luxury",
+      "categoryIcon": "gem"
+    },
+    {
+      "category": "club",
+      "categoryIcon": "file-music-fill"
     }
   ],
   "hotels": [
@@ -105,7 +195,6 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "category": "pools",
       "categoryIcon": "water"
-
     },
     {
       "id": 5,
@@ -121,7 +210,6 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "category": "tropical",
       "categoryIcon": "cloud-rain-heavy-fill"
-
     },
     {
       "id": 6,
@@ -137,7 +225,6 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "category": "trending",
       "categoryIcon": "fire"
-
     },
     {
       "id": 7,
@@ -153,7 +240,6 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "category": "breakfast",
       "categoryIcon": "cup-hot-fill"
-
     },
     {
       "id": 8,
@@ -184,7 +270,6 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "category": "new",
       "categoryIcon": "key"
-
     },
     {
       "id": 10,
@@ -200,7 +285,6 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "category": "gambilng",
       "categoryIcon": "controller"
-
     },
     {
       "id": 11,
@@ -231,7 +315,6 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "category": "arctic",
       "categoryIcon": "snow3"
-
     },
     {
       "id": 13,
@@ -262,7 +345,6 @@
       "fifthImage": "https://digital.ihg.com/is/image/ihg/ihgor-member-rate-web-offers-1440x720",
       "category": "parks",
       "categoryIcon": "tree-fill"
-
     },
     {
       "id": 15,

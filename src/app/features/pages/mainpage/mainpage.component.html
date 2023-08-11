@@ -20,3 +20,17 @@
     </div>
   </div>
 </div>
+    <ngx-skeleton-loader count="{{totalSkeleton}}"
+                         appearance="circle"
+                         [theme]="{
+                         'background-color': '#1C2951',
+                         'align-items': 'center',
+                         'border-radius': '8px',
+                          width: '350px',
+                          height: '300px'
+                     }"
+                         *ngIf="isLoading">
+    </ngx-skeleton-loader>
+
+
+

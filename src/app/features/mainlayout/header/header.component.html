@@ -117,11 +117,23 @@
 <!--    <span>Club Cities</span>-->
 <!--  </div>-->
 <div class="search-header">
-  <div class="icons" *ngFor="let category of categories" >
+  <div *ngIf="isLoading">
+    <ngx-skeleton-loader count="{{totalSkeleton}}"
+                         appearance="circle"
+                         [theme]="{
+                         'background-color': '#1C2951',
+                         'margin-left': '40px',
+                          width: '50px'
+                     }"
+    >
+    </ngx-skeleton-loader>
+  </div>
+  <div class="icons" *ngFor="let category of categories" (click)="chooseCategory(category.category)">
     <i [class]="'bi bi-' + category.categoryIcon"></i>
     <span>{{ category.category }}</span>
   </div>
   <i class="arr bi bi-arrow-right-circle-fill"></i>
 </div>
+
 
 <!--</div>-->

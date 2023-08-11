@@ -4,5 +4,6 @@ export interface RegisterUser {
   email: string,
   password: string,
   confirmPassword: string,
-  username: string
+  username: string;
+  host: string
 }

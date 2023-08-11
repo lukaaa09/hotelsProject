@@ -16,6 +16,10 @@ export class HotelsService {
     return this._http.get<HotelModel[]>(`${this.baseUrl}/hotels`)
   }
 
+  public getCategories(): Observable<any> {
+    return this._http.get<any>(`${this.baseUrl}/categories`)
+  }
+
   public hotelDetailsPage(id:number): Observable<HotelModel> {
     return this._http.get<HotelModel>(`${this.baseUrl}/hotels/${id}`)
   }

@@ -28,6 +28,7 @@ import {AngularFireModule} from '@angular/fire/compat';
 import { HotelDetailsComponent } from './features/pages/hotel-details/hotel-details.component';
 import { MainpageComponent } from './features/pages/mainpage/mainpage.component';
 import { CategoryComponent } from './features/pages/category/category.component';
+import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { CategoryComponent } from './features/pages/category/category.component'
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
+    NgxSkeletonLoaderModule,
     MatCheckboxModule,
     MatButtonModule,
     CommonModule,

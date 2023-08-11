@@ -78,3 +78,16 @@
     }
   }
 }
+p {
+  width: 320px;
+}
+
+:host{
+  ::ng-deep{
+    p{
+      .mdc-label {
+        color: white;
+      }
+    }
+  }
+}

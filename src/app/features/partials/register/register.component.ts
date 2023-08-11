@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
 import { AuthService } from '../../../core/services/auth.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormControlName, FormGroup } from '@angular/forms';
 import { RegisterUser } from '../../../core/models/register.user';
 import { catchError, of, tap } from 'rxjs';
 
@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit{
     password: new FormControl(''),
     confirmPassword: new FormControl(''),
     username: new FormControl(''),
+    host: new FormControl('')
   })
 
   constructor(private dialogRef: MatDialogRef<any>,
